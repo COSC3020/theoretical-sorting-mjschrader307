@@ -23,7 +23,7 @@ Answer:
 
 I guess to start I would test this function on very large arrays to see if the runtime indeed follows linear growth. As is understood in Computer Science, however, this should not happen for a comparison-based sorting algorithm.
 
-I would also need to devise some sort of experiment to determine that the algorithm is indeed making comparisons of elements to other elements to order the array.
+I would also need to devise some sort of experiment to determine that the algorithm is indeed making comparisons of elements to other elements to order the array. As far as how to do this (I'm not sure if JavaScript has the capability for this), but I would probably use C++ or something and make a class for array elements and overload the comparison operators, so that a counter is incremented whenever they are used. If the counter changed at all, then there are obviously comparisons being made.
 
 As far as the second part of this question, I am going to analyze the decision tree model like we did in class. In this model, each parent node represents a decision (comparison operation). For any array, there are $n!$ possible orderings or permutations that can be a result of some certain combination of individual comparison results. This is the number of leaves in the tree.
 
